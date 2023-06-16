@@ -29,11 +29,11 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
       - uses: actions/setup-go@v2
-      - name: Clone and run steam-box
+      - name: Clone and run steambox
         run: |-
           git clone https://github.com/Saika-Z/steambox.git 
-          cd steam-box && go build -o steam ./cmd/box/main.go
-          mv ./steam ../ && cd .. && rm -rf steam-box/
+          cd steambox && go build -o steam ./cmd/box/main.go
+          mv ./steam ../ && cd .. && rm -rf steambox/
 
       - name: Commit and push
         run: |-
